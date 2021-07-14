@@ -12,7 +12,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 {
     WORD vk = 0;
     HWND h = nullptr;
-    GetHotKeyFromUser(h,&vk);
-    GetHotKeyFromUser(h,&vk);
+    GetHotKeyFromUser(h,L"title1", & vk);
+    GetHotKeyFromUser(h,L"title2", & vk);
 
 }

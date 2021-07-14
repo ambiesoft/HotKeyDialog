@@ -4,6 +4,7 @@
 // that uses this DLL. This way any other project whose source files include this file see
 // HOTKEYDIALOG_API functions as being imported from a DLL, whereas this DLL sees symbols
 // defined with this macro as being exported.
+#pragma once
 #ifdef HOTKEYDIALOG_EXPORTS
 #define HOTKEYDIALOG_API __declspec(dllexport)
 #else
@@ -12,4 +13,4 @@
 
 // key: inout
 // return: true if user choose OK, otherwise false
-HOTKEYDIALOG_API bool GetHotKeyFromUser(HWND hParent, WORD* key);
+HOTKEYDIALOG_API bool GetHotKeyFromUser(HWND hParent, const wchar_t* title, WORD* key);
